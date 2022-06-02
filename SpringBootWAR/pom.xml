@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>romaniancoder</groupId>
-    <artifactId>BookingDemo</artifactId>
+    <artifactId>BookingApp</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>war</packaging>
 
@@ -43,11 +43,18 @@
             <scope>provided</scope>
         </dependency>
 
-        <dependency>
+        <!-- <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
             <scope>runtime</scope>
+        </dependency> -->
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.29</version>
         </dependency>
+
 
         <dependency>
             <groupId>org.springframework.boot</groupId>

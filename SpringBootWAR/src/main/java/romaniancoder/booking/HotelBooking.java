@@ -9,7 +9,7 @@ import javax.persistence.Id;
 public class HotelBooking {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private long id;
 
     private String hotelName;
@@ -43,4 +43,8 @@ public class HotelBooking {
     public long getId() {
         return id;
     }
+    
+    public void setId(long id) {
+        this.id = id;
+      }
 }

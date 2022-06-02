@@ -1,11 +1,11 @@
 package romaniancoder.booking;
 
+import java.util.Date;
+
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-
-import java.util.Date;
 
 @Controller
 public class ViewController {
@@ -18,7 +18,7 @@ public class ViewController {
     @GetMapping("/")
     public String index(Model model){
         model.addAttribute("datetime", new Date());
-        model.addAttribute("username", "John");
+        model.addAttribute("username", "Anonymus");
         model.addAttribute("mode", appMode);
 
         return "index";

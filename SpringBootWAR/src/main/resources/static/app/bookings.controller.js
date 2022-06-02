@@ -17,6 +17,7 @@
         vm.getAll = getAll;
         vm.getAffordable = getAffordable;
         vm.deleteBooking = deleteBooking;
+        vm.create = create;
 
         init();
 
@@ -51,13 +52,14 @@
             var url = "/booking-app/bookings/create";
 
             var booking = {
-                pricePerNight:300,
-                hotelName:"Some Hotel",
-                nbOfNights:5
+                pricePerNight: Math.floor(Math.random() * 200) + 5,
+                hotelName:"Some Hotel "+Math.random().toString(36).slice(-3),
+                nbOfNights:Math.floor(Math.random() * 10) + 1
             };
-
+            console.log(booking);
             $http.post(url, booking).then(function(response){
                 alert('Hotel saved :)');
+                console.log(response);
             });
         }
     }
